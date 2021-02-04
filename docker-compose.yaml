@@ -4,13 +4,13 @@ services:
   web:
     build: ./app
     command: [
-        'python', 'manage.py', 'runserver', '0.0.0.0:8000',
+        'python', 'manage.py', 'runserver', '0.0.0.0:80',
         '--settings=usermanager.settings_db_postgres'
     ]
     volumes:
       - ./app/:/var/app/
     ports:
-      - '8000:8000'
+      - '8080:80'
     depends_on:
       - mysql
       - postgres
@@ -31,6 +31,6 @@ services:
     environment:
       - MYSQL_PASSWORD=mysql
       - MYSQL_USER=mysql
-      - MYSQL_DATABASE=usermanager_m
+      - MYSQL_DATABASE=usermanager
       - MYSQL_ROOT_PASSWORD=185335
     restart: always
