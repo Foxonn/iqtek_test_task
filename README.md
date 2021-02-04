@@ -6,13 +6,13 @@
 
 `docker-compose up --build`
 
-Перезапустить контейнер: web
+`docker restart iqtek_test_task_web_1`
 
 Подключаемся к контейнеру web, и выполняет:
 1. `python manage.py migrate`
 2. `python manage.py loaddata usermanager/fixtures/data_initial.json`
 
-Перезапустить контейнер: web
+`docker restart iqtek_test_task_web_1`
 
 http://localhost:8080/api/v1/user/
 
