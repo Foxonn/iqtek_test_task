@@ -8,7 +8,7 @@
 
 Перезапустить контейнер: web
 
-Подключаемся к контейнеру django_app, и выполняет:
+Подключаемся к контейнеру web, и выполняет:
 1. `python manage.py migrate`
 2. `python manage.py loaddata usermanager/fixtures/data_initial.json`
 
