@@ -10,6 +10,8 @@ RUN mkdir -p /application/
 
 COPY Pipfile Pipfile.lock /var/app/
 
+RUN pip install mysqlclient
+
 WORKDIR /var/app/
 
 RUN pipenv install --deploy --system --ignore-pipfile

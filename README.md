@@ -6,11 +6,13 @@
 
 `docker-compose up --build`
 
+Перезапустить контейнер: web
+
 Подключаемся к контейнеру django_app, и выполняет:
 1. `python manage.py migrate`
 2. `python manage.py loaddata usermanager/fixtures/data_initial.json`
 
-Перезапустить все контейнеры
+Перезапустить контейнер: web
 
 http://localhost:8080/api/v1/user/
 

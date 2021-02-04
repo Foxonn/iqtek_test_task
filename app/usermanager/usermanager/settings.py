@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'drf_yasg',
-    'user',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,10 +76,6 @@ WSGI_APPLICATION = 'usermanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3.usermanager',
-    },
-    'postgres': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'usermanager',
         'USER': 'postgres',

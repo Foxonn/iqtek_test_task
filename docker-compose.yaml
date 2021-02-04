@@ -3,10 +3,7 @@ version: '3'
 services:
   web:
     build: ./app
-    command: [
-        'python', 'manage.py', 'runserver', '0.0.0.0:80',
-        '--settings=usermanager.settings_db_postgres'
-    ]
+    command: [ 'python', 'manage.py', 'runserver', '0.0.0.0:80', ]
     volumes:
       - ./app/:/var/app/
     ports:
@@ -19,13 +16,12 @@ services:
   redis:
     image: redis
   postgres:
-    image: postgres:13
+    image: postgres:12
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_DB=usermanager
       - PGDATA=/var/lib/postgresql/data/pgdata
-    restart: always
   mysql:
     image: mysql:5.7
     environment:
@@ -33,4 +29,3 @@ services:
       - MYSQL_USER=mysql
       - MYSQL_DATABASE=usermanager
       - MYSQL_ROOT_PASSWORD=185335
-    restart: always
