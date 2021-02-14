@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: ./app
-    command: [ 'python', 'manage.py', 'runserver', '0.0.0.0:80', ]
+    command: [ 'uvicorn main:app --reload', ]
     volumes:
       - ./app/:/var/app/
     ports:
