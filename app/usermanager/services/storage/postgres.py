@@ -1,5 +1,6 @@
 import psycopg2
 
+from .sql import SQLStorage
 from .storage import StorageAbstractClass
 
 
@@ -9,3 +10,7 @@ class Postgres(StorageAbstractClass):
 
     def is_connected(self):
         return True if self._conn else False
+
+
+class PostgresStorage(SQLStorage):
+    pass

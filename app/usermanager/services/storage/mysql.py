@@ -1,5 +1,6 @@
 from MySQLdb import _mysql
 
+from .sql import SQLStorage
 from .storage import StorageAbstractClass
 
 
@@ -9,3 +10,7 @@ class MySQL(StorageAbstractClass):
 
     def is_connected(self):
         return True if self._conn else False
+
+
+class MySQLStorage(SQLStorage):
+    pass
