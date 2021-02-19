@@ -3,11 +3,11 @@ version: '3'
 services:
   web:
     build: ./app
-    command: [ 'uvicorn main:app --reload', ]
+    command: 'uvicorn main:app --reload --host 0.0.0.0'
     volumes:
       - ./app/:/var/app/
     ports:
-      - '8080:80'
+      - '8080:8000'
     depends_on:
       - mysql
       - postgres
