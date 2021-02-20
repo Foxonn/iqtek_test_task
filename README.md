@@ -10,7 +10,11 @@
 
 > postgres запускается не сразу, потому потребуется перезагрузка
 
-Подключаемся к контейнеру web, и выполняет:
+Подключаемся к контейнеру web:
+
+`docker exec -it iqtek_test_task_web_1 bash`
+
+и выполняет:
 
 `python app/usermanager/init_table.py`  # создание таблиц для postgres и mysql
 

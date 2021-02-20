@@ -277,7 +277,7 @@ class RedisUserRepository(RedisStorage, UserRepositoryAbstractClass):
         all = self.conn.hgetall('user')
         users = []
 
-        if not rows:
+        if not all:
             return []
 
         for user in all.values():
