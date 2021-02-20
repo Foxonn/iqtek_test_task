@@ -14,8 +14,10 @@ services:
       - redis
     working_dir: /var/
   redis:
+    restart: always
     image: redis
   postgres:
+    restart: always
     image: postgres:12
     environment:
       - POSTGRES_PASSWORD=postgres
@@ -23,6 +25,7 @@ services:
       - POSTGRES_DB=usermanager
       - PGDATA=/var/lib/postgresql/data/pgdata
   mysql:
+    restart: always
     image: mysql:5.7
     environment:
       - MYSQL_PASSWORD=mysql
