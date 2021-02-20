@@ -3,16 +3,16 @@ version: '3'
 services:
   web:
     build: ./app
-    command: 'uvicorn main:app --reload --host 0.0.0.0'
+    command: 'uvicorn app.usermanager.main:app --reload --host 0.0.0.0 --log-level=debug'
     volumes:
-      - ./app/:/var/app/
+      - ./app:/var/app
     ports:
       - '8080:8000'
     depends_on:
       - mysql
       - postgres
       - redis
-    working_dir: /var/app/usermanager/
+    working_dir: /var/
   redis:
     image: redis
   postgres:

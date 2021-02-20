@@ -1,7 +1,10 @@
+from typing import Union
+
+
 class User:
     def __init__(
             self,
-            id: int = None,
+            id: Union[str, int] = None,
             *,
             first_name: str,
             middle_name: str,
