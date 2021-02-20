@@ -14,7 +14,7 @@
 
 `docker exec -it iqtek_test_task_web_1 bash`
 
-и выполняет:
+и выполняем:
 
 `python app/usermanager/init_table.py`  # создание таблиц для postgres и mysql
 
